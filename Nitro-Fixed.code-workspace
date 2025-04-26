@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Nitro",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502
+	}
+}

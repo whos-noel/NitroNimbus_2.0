@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitronimbus - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nitronimbus</h1>
+            <p class="subtitle">Modular Exhaust Filter Monitoring System</p>
+            <nav>
+                <a href="index.html" class="nav-item active">
+                    <span class="nav-icon">📊</span> Dashboard
+                </a>
+                <a href="statistics.html" class="nav-item">
+                    <span class="nav-icon">📈</span> Statistics
+                </a>
+                <a href="calendar.html" class="nav-item">
+                    <span class="nav-icon">📅</span> Calendar
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">👤</span> Profile
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="dashboard-grid">
+                <!-- System Overview Card -->
+                <div class="stats-card system-overview">
+                    <h2>System Overview</h2>
+                    <div class="status-section">
+                        <h3>Current Status</h3>
+                        <div class="connection-status">
+                            <span class="status-icon">🔌</span>
+                            <span id="connection-status">Disconnected</span>
+                        </div>
+                        <button id="connect-btn" class="connect-button">Connect to Arduino</button>
+                    </div>
+                    <div class="readings-section">
+                        <h3>Latest Readings</h3>
+                        <div class="reading">
+                            <span class="label">NO Level:</span>
+                            <span class="value" id="no-level">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                        <div class="reading">
+                            <span class="label">NOx Level:</span>
+                            <span class="value" id="nox-level">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                        <div class="reading">
+                            <span class="label">Last Updated:</span>
+                            <span id="last-update-time">Never</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Statistics Card -->
+                <div class="stats-card quick-stats">
+                    <h2>Quick Statistics</h2>
+                    <div class="stats-section">
+                        <div class="stat-group">
+                            <h3>Current Levels</h3>
+                            <div class="reading">
+                                <span class="label">NO:</span>
+                                <span class="value" id="current-no">0.00</span>
+                                <span class="unit">ppm</span>
+                            </div>
+                            <div class="reading">
+                                <span class="label">NOx:</span>
+                                <span class="value" id="current-nox">0.00</span>
+                                <span class="unit">ppm</span>
+                            </div>
+                        </div>
+                        <div class="stat-group">
+                            <h3>Reduction Rate</h3>
+                            <div class="reading">
+                                <span class="label">NO:</span>
+                                <span class="value" id="no-reduction">0.00</span>
+                                <span class="unit">%</span>
+                            </div>
+                            <div class="reading">
+                                <span class="label">NOx:</span>
+                                <span class="value" id="nox-reduction">0.00</span>
+                                <span class="unit">%</span>
+                            </div>
+                        </div>
+                        <div class="stat-group">
+                            <h3>Environment</h3>
+                            <div class="reading">
+                                <span class="label">Temperature:</span>
+                                <span class="value" id="temperature">0.0</span>
+                                <span class="unit">°C</span>
+                            </div>
+                            <div class="reading">
+                                <span class="label">Humidity:</span>
+                                <span class="value" id="humidity">0.0</span>
+                                <span class="unit">%</span>
+                            </div>
+                            <div class="reading">
+                                <span class="label">Flow Rate:</span>
+                                <span class="value" id="flow-rate">0.00</span>
+                                <span class="unit">m/s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtration Levels Cards -->
+                <div class="stats-card">
+                    <h2>CO Levels</h2>
+                    <div class="sensor-readings">
+                        <div class="reading" id="coBefore">
+                            <span class="label">Before Filtration:</span>
+                            <span class="value">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                        <div class="reading" id="coAfter">
+                            <span class="label">After Filtration:</span>
+                            <span class="value">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <h2>NOx Levels</h2>
+                    <div class="sensor-readings">
+                        <div class="reading" id="noxBefore">
+                            <span class="label">Before Filtration:</span>
+                            <span class="value">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                        <div class="reading" id="noxAfter">
+                            <span class="label">After Filtration:</span>
+                            <span class="value">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitronimbus - Statistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nitronimbus</h1>
+            <p class="subtitle">Modular Exhaust Filter Monitoring System</p>
+            <nav>
+                <a href="index.html" class="nav-item">
+                    <span class="nav-icon">📊</span> Dashboard
+                </a>
+                <a href="statistics.html" class="nav-item active">
+                    <span class="nav-icon">📈</span> Statistics
+                </a>
+                <a href="calendar.html" class="nav-item">
+                    <span class="nav-icon">📅</span> Calendar
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">👤</span> Profile
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="stats-container">
+                <div class="stats-card">
+                    <h2>CO Levels</h2>
+                    <div class="sensor-readings">
+                        <div class="reading" id="coBefore">
+                            <span class="label">Before Filtration:</span>
+                            <span class="value">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                        <div class="reading" id="coAfter">
+                            <span class="label">After Filtration:</span>
+                            <span class="value">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <h2>NOx Levels</h2>
+                    <div class="sensor-readings">
+                        <div class="reading" id="noxBefore">
+                            <span class="label">Before Filtration:</span>
+                            <span class="value">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                        <div class="reading" id="noxAfter">
+                            <span class="label">After Filtration:</span>
+                            <span class="value">0.00</span>
+                            <span class="unit">ppm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="last-updated">
+                Last updated: <span id="last-updated">--:--:--</span>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
